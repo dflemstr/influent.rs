@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 pub mod hyper;
 
-pub trait Hurl {
+pub trait Hurl: Send + Sync {
     fn request(&self, Request) -> HurlResult;
 }
 
